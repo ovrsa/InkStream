@@ -1,0 +1,22 @@
+<h1>投稿編集</h1>
+
+<div class='button-container'>
+    <%= link_to '投稿一覧画面', posts_path, class: 'link-button' %>
+</div>
+
+<%= form_with model: @post, html: { class: 'form-container' } do |form| %>
+
+    <div class="form-input">
+        <%= form.label :title %> <%= form.text_field :title %>
+    </div>
+
+    <div class="form-input">
+        <%= form.label :content %> <%= form.text_area :content %>
+    </div>
+
+    <div class="button-container">
+        <%= form.submit 'Done', class: 'link-button' %>
+    </div>
+
+<% end %>
+
