@@ -1,0 +1,17 @@
+<h1>hello ruby</h1>
+
+<div class='button-container'>
+    <%= link_to '新規投稿', new_post_path, class: 'link-button' %>
+</div>
+
+<ul>
+    <% @posts.each do |post| %>
+        <li>
+            <h2><%= post.title %></h2>
+            <p><%= post.content %></p>
+            <span>
+                <small><%= post.created_at %></small>
+            </span>
+        </li>
+    <% end %>
+</ul>
